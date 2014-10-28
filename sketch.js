@@ -89,25 +89,24 @@ function assess(player, computer) {
 	}
 }
 
-function rockPress() {
-	player_choice = "rock";
+$(document).ready(function(){
+  $("#rock_but").click(function(){
+  	player_choice = "rock";
 	stage = "game";
-}
-
-function paperPress() {
-	player_choice = "paper";
+  });
+  $("#paper_but").click(function(){
+  	player_choice = "paper";
 	stage = "game";
-}
-
-function scissorsPress() {
-	player_choice = "scissors";
+  });
+  $("#scissors_but").click(function(){
+  	player_choice = "scissors";
 	stage = "game";
-}
-
-function nukePress() {
-	player_choice = "nuke";
+  });
+  $("#compPic").click(function(){
+  	player_choice = "nuke";
 	stage = "game";
-}
+  });
+});
 
 function updateScore(result) {
 	if (result == "win") {
@@ -117,8 +116,8 @@ function updateScore(result) {
 		computer_score++;
 	}
 }
-function drawScreen() {
-	
+
+function drawScreen() {	
 	fill(0);
  	textFont('Helvetica');
 
@@ -144,9 +143,11 @@ function drawScreen() {
 		case "finale":
 			background(255);
 			textSize(64);
+			textAlign(CENTER);
 			text(win_lose_draw, 420, 60);
 			updateScore(win_lose_draw);
 			textSize(32);
+			textAlign(CENTER);
 			text("You:" + player_score + "  Computer:" + computer_score, 340, 120);
 			computer_pick();
 			compTimer = false;

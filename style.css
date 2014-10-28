@@ -17,19 +17,23 @@ h2	{
 .playImg {
 	border: 5px solid green;
 	float: left;
+	width: 15%;
 }
 
 .compImg {
 	border: 5px solid black;
 	float: right;
+	width: 15%;
 }
 
 #playerChoice {
 	float: left;
+	width: 15%;
 }
 
 #compChoice {
 	float: right;
+	width: 15%;
 }
 
 #vsTitle {
