@@ -1,0 +1,42 @@
+<head>
+  <script language="javascript" src="p5.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+  	  var io = require('sock.io')(8888);
+  	  var socket = io('http://stevedudek.github.io/RockPaperScissors');
+	  // var socket = io('http://localhost');
+  </script>
+  <script language="javascript" src="sketch.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Debug to find working directory -->
+  <script type="text/javascript">
+  	var loc = window.location.pathname;
+	var dir = loc.substring(0, loc.lastIndexOf('/'));
+  </script>
+
+</head>
+
+<body>
+	<h1>Rock Paper Scissors</h1>
+	<h2>Press a green choice to beat the item in black</h2>
+
+	
+
+	<!-- Rock Paper Scissors buttons -->
+	<div id="result" align="left"><br>
+		<img class="playImg" id="rock_but" alt="rock" src="rock.jpg">
+		<img class="playImg" id="paper_but" alt="paper" src="paper.jpg">
+		<img class="playImg" id="scissors_but" alt="scissors" src="scissors.jpg">
+		<img class="compImg" id="compPic" alt="computer" src="question.jpg">
+	</div>
+
+	<!-- Player and Computer Results images -->
+	<div id="vsTitle">
+		<img id="playerChoice" alt="player" src="question.jpg">
+		-- Player vs. Computer --
+		<img id="compChoice" alt="computer" src="question.jpg">
+	</div>
+	
+</body>
