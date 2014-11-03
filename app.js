@@ -7,7 +7,7 @@ var io = require('socket.io')(server);
 
 server.listen(8888);
 
-app.use('http://stevedudek.github.io/RockPaperScissors/public'));
+app.use(express('http://stevedudek.github.io/RockPaperScissors/public'));
 // app.use(express.static(__dirname + '/public'));
 /*
 app.get('/', function (req, res) {
