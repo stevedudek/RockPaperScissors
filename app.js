@@ -7,8 +7,8 @@ var io = require('socket.io')(server);
 
 server.listen(8888);
 
-app.use(express('http://stevedudek.github.io/RockPaperScissors/public'));
-// app.use(express.static(__dirname + '/public'));
+// app.use(express('http://stevedudek.github.io/RockPaperScissors/public'));
+app.use(express.static(__dirname + '/public'));
 
 io.on('connection', function (socket) {
   socket.on('player', function (player) {
