@@ -7,13 +7,8 @@ var io = require('socket.io')(server);
 
 server.listen(8888);
 
-// app.use(express('http://stevedudek.github.io/RockPaperScissors/public'));
-app.use(express.static(__dirname + '/public'));
-/*
-app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/index.html');
-});
-*/
+app.use(express('http://stevedudek.github.io/RockPaperScissors/public'));
+// app.use(express.static(__dirname + '/public'));
 
 io.on('connection', function (socket) {
   socket.on('player', function (player) {
@@ -31,18 +26,4 @@ io.on('connection', function (socket) {
   socket.on('cscore', function (score) {
     console.log("Computer has " + score + " points");
   });
-	/*
-  socket.emit('news', { hello: 'world' });
-  socket.on('my other event', function (data) {
-    console.log(data);
-  });
-*/
 });
-
-/*
-// __dirname + '/public'  = ./public
-// Will look for index.html in public directory
-app.use(express.static(__dirname + '/public'));
-
-app.listen(8888);
-*/

@@ -9,8 +9,6 @@ var player_score = 0;
 var computer_score = 0;
 var compTimer = false;
 
-// text('sketch.js is loading');
-
 function setup() {
   // put setup code here
   var result = createCanvas(900,140);
